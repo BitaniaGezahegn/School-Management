@@ -160,7 +160,7 @@ $gpa = $total_credits > 0 ? $total_points / $total_credits : 0;
         padding: 20px 0;
         position: absolute;
         top: 0;
-        right: 60px;
+        right: 180px;
         display: flex;
         height: fit-content;
         gap: 8px;
@@ -191,6 +191,7 @@ $gpa = $total_credits > 0 ? $total_points / $total_credits : 0;
         <div class="main-content">
             <h1>My Academic Record</h1>
             <div id="sidebar">
+                    <a href="student_schedule.php" <?php echo basename($_SERVER['PHP_SELF']) == 'student_schedule.php' ? 'style="background: #34495e;"' : ''; ?>>My Schedule</a>
                     <a href="login.php" <?php echo basename($_SERVER['PHP_SELF']) == 'login.php' ? 'style="background: #34495e;"' : ''; ?>>Login</a>
                     <a href="register.php" <?php echo basename($_SERVER['PHP_SELF']) == 'register.php' ? 'style="background: #34495e;"' : ''; ?>>Register</a>
                     <a href="logout.php" style="color: #e74c3c;">Logout</a>

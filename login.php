@@ -88,29 +88,37 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - School Management</title>
-    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/auth_style.css">
 </head>
 <body>
-    <div class="login-card">
-        <h2>School Management Login</h2>
+    <div class="form-container card">
+        <h2>School Management | Login</h2>
         <?php if (!empty($error)): ?>
             <div class="error"><?php echo htmlspecialchars($error); ?></div>
         <?php endif; ?>
         
         <form action="login.php" method="post">
-            <input 
-                type="text" 
-                name="account" 
-                placeholder="Enter your email address" 
-                value="<?php echo htmlspecialchars($account); ?>" 
-                required
-            >
-            <input 
-                type="password" 
-                name="password" 
-                placeholder="Enter your password" 
-                required
-            >
+            <div class="form-group">
+                <label for="account">Email Address</label>
+                <input 
+                    type="text" 
+                    id="account"
+                    name="account" 
+                    placeholder="Enter your email address" 
+                    value="<?php echo htmlspecialchars($account); ?>" 
+                    required
+                >
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input 
+                    type="password" 
+                    id="password"
+                    name="password" 
+                    placeholder="Enter your password" 
+                    required
+                >
+            </div>
             <button type="submit">Login</button>
         </form>
         <p style="text-align: center; margin-top: 20px;">

@@ -8,7 +8,9 @@ if (isset($_SESSION['user_id']) && $_SESSION['role'] == 'admin') { ?>
     <a href="teachers.php" <?php echo basename($_SERVER['PHP_SELF']) == 'teachers.php' ? 'style="background: #34495e;"' : ''; ?>>Teachers</a>
     <a href="courses.php" <?php echo basename($_SERVER['PHP_SELF']) == 'courses.php' ? 'style="background: #34495e;"' : ''; ?>>Courses</a>
     <a href="rooms.php" <?php echo basename($_SERVER['PHP_SELF']) == 'rooms.php' ? 'style="background: #34495e;"' : ''; ?>>Rooms</a>
+    <a href="schedules.php" <?php echo basename($_SERVER['PHP_SELF']) == 'schedules.php' ? 'style="background: #34495e;"' : ''; ?>>Schedules</a>
     <a href="marks.php" <?php echo basename($_SERVER['PHP_SELF']) == 'marks.php' ? 'style="background: #34495e;"' : ''; ?>>Marks</a>
+    <hr>
     <a href="login.php" <?php echo basename($_SERVER['PHP_SELF']) == 'login.php' ? 'style="background: #34495e;"' : ''; ?>>Login</a>
     <a href="register.php" <?php echo basename($_SERVER['PHP_SELF']) == 'register.php' ? 'style="background: #34495e;"' : ''; ?>>Register</a>
     <a href="logout.php" style="color: #e74c3c;">Logout</a>
@@ -20,7 +22,9 @@ if (isset($_SESSION['user_id']) && $_SESSION['role'] == 'admin') { ?>
 if (isset($_SESSION['user_id']) && $_SESSION['role'] == 'teacher') { ?>
     <div id="sidebar">
     <h2 style="padding: 0 20px;">School Management</h2>
+    <a href="teacher_schedule.php" <?php echo basename($_SERVER['PHP_SELF']) == 'teacher_schedule.php' ? 'style="background: #34495e;"' : ''; ?>>My Schedule</a>
     <a href="marks.php" <?php echo basename($_SERVER['PHP_SELF']) == 'marks.php' ? 'style="background: #34495e;"' : ''; ?>>Marks</a>
+    <hr>
     <a href="login.php" <?php echo basename($_SERVER['PHP_SELF']) == 'login.php' ? 'style="background: #34495e;"' : ''; ?>>Login</a>
     <a href="register.php" <?php echo basename($_SERVER['PHP_SELF']) == 'register.php' ? 'style="background: #34495e;"' : ''; ?>>Register</a>
     <a href="logout.php" style="color: #e74c3c;">Logout</a>

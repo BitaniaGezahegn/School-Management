@@ -83,11 +83,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register - School Management</title>
-    <link rel="stylesheet" href="css/login_register.css"> <!-- You might want a dedicated CSS -->
+    <link rel="stylesheet" href="css/auth_style.css">
 </head>
 <body>
     <div class="form-container card">
-        <h2>Create Account</h2>
+        <h2>School Management | Create Account</h2>
         <?php if ($error): ?><div class="alert alert-error"><?= htmlspecialchars($error) ?></div><?php endif; ?>
         <?php if ($success): ?><div class="alert alert-success"><?= $success ?></div><?php endif; ?>
         
@@ -120,22 +120,3 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     </div>
 </body>
 </html>
-
-<style>
-/* Basic styling for login_register.css - can be moved to a separate file */
-body { font-family: Arial, sans-serif; background-color: #f4f4f4; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; padding: 20px; box-sizing: border-box;}
-.form-container.card { background: white; padding: 25px 30px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); width: 100%; max-width: 400px; }
-.form-container h2 { text-align: center; color: #333; margin-bottom: 20px; }
-.form-group { margin-bottom: 15px; }
-.form-group label { display: block; margin-bottom: 5px; color: #555; font-weight: bold; }
-.form-group input, .form-group select { width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box; }
-.form-group input:focus, .form-group select:focus { border-color: #007bff; outline: none; }
-button[type="submit"] { width: 100%; padding: 10px 15px; background-color: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 16px; transition: background-color 0.3s ease; }
-button[type="submit"]:hover { background-color: #0056b3; }
-.alert { padding: 10px; margin-bottom: 15px; border-radius: 4px; text-align: center; }
-.alert-error { background-color: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
-.alert-success { background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
-.form-container p { text-align: center; margin-top: 20px; }
-.form-container p a { color: #007bff; text-decoration: none; }
-.form-container p a:hover { text-decoration: underline; }
-</style>
