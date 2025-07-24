@@ -11,28 +11,28 @@ CREATE TABLE login (
     password VARCHAR(50) NOT NULL,
     role ENUM('admin', 'teacher', 'student') NOT NULL,
     user_id VARCHAR(10) DEFAULT NULL, -- References student/teacher ID, NULLable initially
-    status ENUM('active','pending') DEFAULT 'active', -- From Solution Architecture
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP -- From Solution Architecture
+    status ENUM('active','pending') DEFAULT 'active',
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
 -- 2. Students Table
 CREATE TABLE students (
     stud_id VARCHAR(10) PRIMARY KEY,
     stud_name VARCHAR(50) NOT NULL,
-    email VARCHAR(100) UNIQUE, -- Added for registration
+    email VARCHAR(100) UNIQUE,
     age INT,
     sex ENUM('M', 'F'),
     year INT,
-    phone VARCHAR(20) DEFAULT NULL -- From Solution Architecture
+    phone VARCHAR(20) DEFAULT NULL
 );
 
 -- 3. Teachers Table
 CREATE TABLE teachers (
     t_id VARCHAR(10) PRIMARY KEY,
     t_name VARCHAR(50) NOT NULL,
-    email VARCHAR(100) UNIQUE, -- Added for registration
+    email VARCHAR(100) UNIQUE,
     major VARCHAR(30),
-    phone VARCHAR(20) DEFAULT NULL -- From Solution Architecture
+    phone VARCHAR(20) DEFAULT NULL
 );
 
 -- 4. Courses Table
@@ -63,7 +63,6 @@ CREATE TABLE rooms (
 );
 
 -- 7. Class Sessions Table (for schedules)
--- This table was missing from your original database_schema.sql but is used in schedules.php
 CREATE TABLE class_sessions (
     session_id INT AUTO_INCREMENT PRIMARY KEY,
     course_id VARCHAR(10) NOT NULL,

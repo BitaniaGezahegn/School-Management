@@ -273,7 +273,6 @@ $gpa = $total_credits > 0 ? $total_points / $total_credits : 0;
                 <?php if (!empty($grades)): ?>
                 <div class="gpa-display">
                     Cumulative GPA: <span class="gpa-value"><?php echo number_format($gpa, 2); ?></span>
-                    (on a 4.0 scale)
                 </div>
                 <?php endif; ?>
             </div>
