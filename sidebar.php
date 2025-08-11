@@ -11,8 +11,6 @@ if (isset($_SESSION['user_id']) && $_SESSION['role'] == 'admin') { ?>
     <a href="schedules.php" <?php echo basename($_SERVER['PHP_SELF']) == 'schedules.php' ? 'style="background: #34495e;"' : ''; ?>>Schedules</a>
     <a href="marks.php" <?php echo basename($_SERVER['PHP_SELF']) == 'marks.php' ? 'style="background: #34495e;"' : ''; ?>>Marks</a>
     <hr>
-    <a href="login.php" <?php echo basename($_SERVER['PHP_SELF']) == 'login.php' ? 'style="background: #34495e;"' : ''; ?>>Login</a>
-    <a href="register.php" <?php echo basename($_SERVER['PHP_SELF']) == 'register.php' ? 'style="background: #34495e;"' : ''; ?>>Register</a>
     <a href="logout.php" style="color: #e74c3c;">Logout</a>
 </div>
 <?php }?>
